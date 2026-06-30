@@ -1,4 +1,4 @@
-:global(:root) {
+:root {
   --sc-bg: #0a0612;
   --sc-bg-2: #120a1f;
   --sc-bg-3: #1a0f2e;
@@ -23,22 +23,22 @@
   --sc-glow-soft: 0 0 80px rgba(168, 85, 247, 0.25);
 }
 
-:global(html) {
+html {
   background: #0a0612;
   min-height: 100%;
 }
 
-:global(body) {
+body {
   margin: 0;
   min-height: 100vh;
   background: #0a0612;
   color: var(--sc-text);
 }
 
-:global(#root) {
+#root {
   min-height: 100vh;
 }
 
-:global(*) {
+* {
   box-sizing: border-box;
 }
