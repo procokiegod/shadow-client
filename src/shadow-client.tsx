@@ -6,6 +6,7 @@ import { Exclusive } from './exclusive.js';
 import { CloserLook } from './closer-look.js';
 import { Pricing } from './pricing.js';
 import { CtaFooter } from './cta-footer.js';
+
 import './theme.module.css';
 import styles from './styles.module.css';
 
@@ -17,6 +18,7 @@ function LandingPage() {
         <div className={`${styles.blob} ${styles.blob2}`} />
         <div className={`${styles.blob} ${styles.blob3}`} />
       </div>
+
       <div className={styles.content}>
         <Navbar />
         <Hero />
@@ -33,8 +35,7 @@ function LandingPage() {
 export function ShadowClient() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="*" element={<LandingPage />} />
     </Routes>
   );
 }
-
