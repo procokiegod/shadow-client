@@ -1,0 +1,50 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btnLarge { padding: 15px 30px; font-size: 16px; }
+.btnPrimary {
+  background: linear-gradient(135deg, var(--sc-purple-deep), var(--sc-purple));
+  color: #fff;
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.45);
+}
+.btnPrimary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 40px rgba(168, 85, 247, 0.8); }
+.btnPrimary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -120%;
+  width: 80%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transition: left 0.6s ease;
+}
+.btnPrimary:hover::after { left: 130%; }
+.btnGhost {
+  background: rgba(168, 85, 247, 0.08);
+  color: var(--sc-purple-light);
+  border: 1px solid var(--sc-border-strong);
+}
+.btnGhost:hover { background: rgba(168, 85, 247, 0.18); transform: translateY(-3px); box-shadow: 0 0 24px rgba(168, 85, 247, 0.4); }
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.revealVisible { opacity: 1; transform: translateY(0); }
+.sectionLabel {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sc-magenta);
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 0 0 18px rgba(232, 121, 249, 0.6);
+}
+

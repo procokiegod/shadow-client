@@ -1,0 +1,54 @@
+.page {
+  background: var(--sc-bg);
+  color: var(--sc-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+}
+.blob1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.6), transparent 70%);
+  top: -200px; left: -150px;
+  animation: float1 18s ease-in-out infinite;
+}
+.blob2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.4), transparent 70%);
+  top: 40%; right: -150px;
+  animation: float2 22s ease-in-out infinite;
+}
+.blob3 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35), transparent 70%);
+  bottom: -300px; left: 30%;
+  animation: float3 26s ease-in-out infinite;
+}
+@keyframes float1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+}
+@keyframes float2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-100px, -60px) scale(1.2); }
+}
+@keyframes float3 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(80px, -100px) scale(1.1); }
+}
+.content { position: relative; z-index: 1; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+

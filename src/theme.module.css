@@ -1,0 +1,22 @@
+:global(:root) {
+  --sc-bg: #0a0612;
+  --sc-bg-2: #120a1f;
+  --sc-bg-3: #1a0f2e;
+  --sc-panel: rgba(30, 18, 54, 0.6);
+  --sc-panel-solid: #160c28;
+  --sc-border: rgba(168, 85, 247, 0.18);
+  --sc-border-strong: rgba(168, 85, 247, 0.45);
+  --sc-purple: #a855f7;
+  --sc-purple-light: #c4a3ff;
+  --sc-purple-bright: #d8b4fe;
+  --sc-purple-deep: #7c3aed;
+  --sc-magenta: #e879f9;
+  --sc-text: #f3eaff;
+  --sc-text-dim: #b3a3cc;
+  --sc-text-mute: #7d6f96;
+  --sc-glow: 0 0 40px rgba(168, 85, 247, 0.5);
+  --sc-glow-soft: 0 0 80px rgba(168, 85, 247, 0.25);
+}
+:global(body) { margin: 0; }
+:global(*) { box-sizing: border-box; }
+

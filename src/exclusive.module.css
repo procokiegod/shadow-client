@@ -1,0 +1,53 @@
+.section { padding: 80px 24px; }
+.container { max-width: 1000px; margin: 0 auto; }
+.heading { text-align: center; font-size: 40px; font-weight: 800; margin: 0 0 10px; }
+.sub { text-align: center; color: var(--sc-text-mute); margin: 0 0 56px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 60px; }
+.textCol h3 { margin-top: 0; }
+.featureTitle { font-size: 26px; font-weight: 700; margin: 0 0 12px; }
+.featureText { color: var(--sc-text-dim); font-size: 15px; line-height: 1.6; margin: 0 0 20px; }
+.list { list-style: none; padding: 0; margin: 0 0 24px; }
+.list li { position: relative; padding-left: 26px; margin-bottom: 12px; color: var(--sc-text-dim); font-size: 14px; }
+.list li::before { content: '◆'; position: absolute; left: 0; color: var(--sc-purple); filter: drop-shadow(0 0 6px rgba(168,85,247,0.8)); }
+.mockProfiles, .mockInventory {
+  background: var(--sc-panel);
+  border: 1px solid var(--sc-border);
+  border-radius: 18px;
+  padding: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+}
+.mockProfiles:hover, .mockInventory:hover { transform: translateY(-6px); }
+.mockHead { font-size: 13px; color: var(--sc-text-dim); font-weight: 600; margin-bottom: 16px; }
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.25), rgba(232,121,249,0.08));
+  border: 1px solid var(--sc-border-strong);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.profileAvatar { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--sc-purple), var(--sc-magenta)); box-shadow: 0 0 16px rgba(168,85,247,0.6); }
+.profileName { font-size: 14px; font-weight: 600; }
+.profileMeta { font-size: 12px; color: var(--sc-text-mute); }
+.like { margin-left: auto; font-size: 12px; background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 8px; }
+.profileRow { height: 44px; border-radius: 10px; background: rgba(255,255,255,0.03); margin-bottom: 10px; }
+.invGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+.invSlot { aspect-ratio: 1; border-radius: 8px; background: rgba(168,85,247,0.08); border: 1px solid var(--sc-border); animation: glowSlot 3s ease-in-out infinite; }
+.invSlot:nth-child(2) { animation-delay: 0.4s; }
+.invSlot:nth-child(5) { animation-delay: 0.8s; }
+.invSlot:nth-child(7) { animation-delay: 1.2s; }
+@keyframes glowSlot {
+  0%, 100% { box-shadow: 0 0 0 rgba(168,85,247,0); }
+  50% { box-shadow: 0 0 14px rgba(168,85,247,0.4); }
+}
+.invBar { font-size: 11px; letter-spacing: 1px; color: var(--sc-text-mute); margin-bottom: 10px; }
+.invPreset { height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--sc-purple-deep), var(--sc-purple)); box-shadow: 0 0 20px rgba(168,85,247,0.5); }
+@media (max-width: 760px) {
+  .row, .rowReverse { grid-template-columns: 1fr; gap: 28px; }
+  .rowReverse .mockInventory { order: 2; }
+}
+
