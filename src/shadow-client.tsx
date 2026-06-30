@@ -7,7 +7,7 @@ import { CloserLook } from './closer-look.js';
 import { Pricing } from './pricing.js';
 import { CtaFooter } from './cta-footer.js';
 
-import './theme.module.css';
+import './theme.css';
 import styles from './styles.module.css';
 
 function LandingPage() {
